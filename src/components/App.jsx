@@ -1,10 +1,10 @@
-import { Route.  Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import Movies from '../pages/Movies/Movies';
 import MovieDetails from './MovieDetails/MovieDetails';
 import Reviews from '../pages/Reviews/Reviews';
 import Cast from '../pages/Cast/Cast';
-import { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 
 import Cont from './Container/Cont';
 import Navigation from './Navigation/Navigation';
@@ -27,8 +27,7 @@ const App = () => {
           <Route path="/movies :movieId" element={<MovieDetails />} />
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
-        
-            <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
     </Cont>
